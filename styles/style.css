@@ -178,3 +178,21 @@ body {
     right: 0%;
     }
 }
+
+@media screen and (min-width:577px) and (max-width:992px) {
+    .nav-icon{
+        display: none;
+    }
+    .header-section{
+        justify-content: space-between;
+    }
+    body{
+         padding: 40px 20px;
+    }
+    .banner-container{
+        flex-direction: column;
+    }
+    .nav-bar{
+        gap: 1.5rem;
+    }
+}
