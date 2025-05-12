@@ -258,6 +258,92 @@ body {
     border-radius: 18px;
 }
 
+.exercise-section-container {
+    margin-top: 50px;
+
+}
+
+.exercise-section-container h1 {
+    text-align: left;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.exercise-section-container p {
+    text-align: left;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 10px;
+}
+
+.exercise-card-container {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.exercise-card-1 {
+    max-width: 300px;
+    max-height: 256px;
+}
+
+.exercise-card-1 img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.exercise-card-2 {
+    max-width: 500px;
+    max-height: 256px;
+}
+
+.exercise-card-2 img {
+    width: 100%;
+    height: 100%;
+}
+
+.exercise-card-3 {
+    max-width: 320px;
+    max-height: 256px;
+}
+
+.exercise-card-3 img {
+    width: 100%;
+    height: 100%;
+}
+
+.exercise-card-4 {
+    max-width: 510px;
+    max-height: 256px;
+}
+
+.exercise-card-4 img {
+    width: 100%;
+    height: 100%;
+}
+
+.exercise-card-5 {
+    max-width: 300px;
+    max-height: 256px;
+}
+
+.exercise-card-5 img {
+    width: 100%;
+    height: 100%;
+}
+
+.exercise-card-6 {
+    max-width: 310px;
+    max-height: 256px;
+}
+
+.exercise-card-6 img {
+    width: 100%;
+    height: 100%;
+}
+
 /* responsive style */
 @media screen and (max-width: 576px) {
 
@@ -292,6 +378,17 @@ body {
         grid-template-columns: repeat(1, 1fr);
         padding: 20px 100px;
     }
+
+    .exercise-card-1,
+    .exercise-card-2,
+    .exercise-card-3,
+    .exercise-card-4,
+    .exercise-card-5,
+    .exercise-card-6 {
+        max-width: 490px;
+        padding: 10px;
+    }
+
 }
 
 @media screen and (min-width:577px) and (max-width:992px) {
@@ -318,5 +415,15 @@ body {
     .habit-image-container {
         grid-template-columns: repeat(2, 1fr);
         padding: 20px 50px;
+    }
+    .exercise-card-1,
+    .exercise-card-2,
+    .exercise-card-3,
+    .exercise-card-4,
+    .exercise-card-5,
+    .exercise-card-6 {
+        max-width: 900px;
+        padding: 10px;
+        max-height: 400px;
     }
 }
