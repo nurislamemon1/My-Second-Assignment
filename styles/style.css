@@ -258,9 +258,9 @@ body {
     border-radius: 18px;
 }
 
+/* exercise section */
 .exercise-section-container {
     margin-top: 50px;
-
 }
 
 .exercise-section-container h1 {
@@ -274,81 +274,148 @@ body {
     font-size: 0.8rem;
     color: rgba(255, 255, 255, 0.5);
     margin-top: 10px;
+    margin-bottom: 20px;
 }
 
-.exercise-card-container {
-    margin-top: 40px;
+.exercise-card-container-1 {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1.3fr;
+}
+
+.exercise-card-container-2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.4fr;
+}
+
+.exercise-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.exercise-card {
+    position: relative;
+    height: 200px;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
     display: flex;
-    flex-wrap: wrap;
-
-}
-
-.exercise-card-1 {
-    max-width: 300px;
-    max-height: 256px;
-}
-
-.exercise-card-1 img {
+    flex-direction: column;
     width: 100%;
     height: 100%;
-
+    padding: 20px;
+    font-size: 12px;
+    font-weight: 400;
+    justify-content: end;
 }
 
-.exercise-card-2 {
-    max-width: 500px;
-    max-height: 256px;
+.overlay-1 {
+    background: rgba(6, 255, 209, 0.342);
 }
 
-.exercise-card-2 img {
+.overlay-2 {
+    background: rgba(255, 0, 0, 0.3);
+}
+
+.overlay-3 {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.overlay-4 {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.overlay-5 {
+    background: rgba(66, 255, 0, 0.3);
+}
+
+.overlay-6 {
+    background: rgba(0, 71, 255, 0.3);
+}
+
+.overlay-1 p {
+    color: rgb(0, 0, 0);
+}
+
+/* bmi section */
+.bmi-section-container {
+    margin-top: 50px;
+    background: rgb(34, 34, 34);
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    gap: 20px;
+}
+
+.bmi-table {
+    padding: 20px 60px;
+}
+
+.bmi-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+table {
+    border-collapse: collapse;
+    max-width: 400px;
+}
+
+th,
+td {
+    border: 0.5px solid grey;
+    padding: 10px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.calculate-bmi {
+    padding: 20px 60px;
+}
+
+.calculate-bmi h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.calculate-bmi p {
+    font-weight: 500;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 8px;
+}
+
+.calculate-bmi form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.calculate-bmi form .span-2 {
+    grid-column: span 2;
+}
+
+input,
+select {
+    background-color: #3a3a3a;
+    border: none;
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.245);
+    font-size: 1rem;
+    padding: 15px 20px;
     width: 100%;
-    height: 100%;
-}
-
-.exercise-card-3 {
-    max-width: 320px;
-    max-height: 256px;
-}
-
-.exercise-card-3 img {
-    width: 100%;
-    height: 100%;
-}
-
-.exercise-card-4 {
-    max-width: 510px;
-    max-height: 256px;
-}
-
-.exercise-card-4 img {
-    width: 100%;
-    height: 100%;
-}
-
-.exercise-card-5 {
-    max-width: 300px;
-    max-height: 256px;
-}
-
-.exercise-card-5 img {
-    width: 100%;
-    height: 100%;
-}
-
-.exercise-card-6 {
-    max-width: 310px;
-    max-height: 256px;
-}
-
-.exercise-card-6 img {
-    width: 100%;
-    height: 100%;
 }
 
 /* responsive style */
 @media screen and (max-width: 576px) {
 
     .banner-container,
-    .run-section-container {
+    .run-section-container,
+    .bmi-section-container {
         flex-direction: column;
     }
 
@@ -379,16 +446,26 @@ body {
         padding: 20px 100px;
     }
 
-    .exercise-card-1,
-    .exercise-card-2,
-    .exercise-card-3,
-    .exercise-card-4,
-    .exercise-card-5,
-    .exercise-card-6 {
-        max-width: 490px;
-        padding: 10px;
+    .third,
+    .sixth {
+        display: none;
     }
 
+    .exercise-card-container-1 {
+        grid-template-columns: 1fr 0.8fr;
+    }
+
+    .exercise-card-container-2 {
+        grid-template-columns: 0.8fr 1fr;
+    }
+
+    .bmi-table {
+        padding: 20px 60px 40px 60px;
+    }
+
+    .bmi-section-container {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media screen and (min-width:577px) and (max-width:992px) {
@@ -404,7 +481,8 @@ body {
         padding: 40px 20px;
     }
 
-    .banner-container {
+    .banner-container,
+    .bmi-section-container {
         flex-direction: column;
     }
 
@@ -416,14 +494,12 @@ body {
         grid-template-columns: repeat(2, 1fr);
         padding: 20px 50px;
     }
-    .exercise-card-1,
-    .exercise-card-2,
-    .exercise-card-3,
-    .exercise-card-4,
-    .exercise-card-5,
-    .exercise-card-6 {
-        max-width: 900px;
-        padding: 10px;
-        max-height: 400px;
+
+    .bmi-table {
+        padding: 20px 60px 40px 60px;
+    }
+
+    .bmi-section-container {
+        grid-template-columns: 1fr;
     }
 }
